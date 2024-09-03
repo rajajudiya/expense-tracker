@@ -1,4 +1,4 @@
-const tracker = require("../models/expense_tracker");
+const tracker = require("../models/transaction");
 
 const defaultController = async (req, res) => {
     const defData = await tracker.find({});
@@ -10,11 +10,11 @@ const todoApp = async (req, res) => {
 
 
     const data = {
-        fullName: req.body.fullName,
-        userName: req.body.userName,
-        email: req.body.email,
-        phoneno: req.body.phoneno,
-        password: req.body.password
+        type: req.body.type,
+        category: req.body.category,
+        amount: req.body.amount,
+        description: req.body.description,
+        date: req.body.date
     }
 
     const datamodelObj = new tracker(data);

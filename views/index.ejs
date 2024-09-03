@@ -208,24 +208,24 @@ form .gender{
         <form action="/todoapp" method="post">
             <div class="user_details">
                 <div class="input_box">
-                    <label for="name">Full Name</label>
-                    <input type="text" name="fullName" placeholder="Enter your name" required>
+                    <label for="name">Type</label>
+                    <input type="text" name="type" placeholder="Enter your name" required>
                 </div>
                 <div class="input_box">
-                    <label for="username">Username</label>
-                    <input type="text" name="userName" placeholder="Enter your username" required>
+                    <label for="username">Category</label>
+                    <input type="text" name="category" placeholder="Enter your username" required>
                 </div>
                 <div class="input_box">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <label for="amount">Amount</label>
+                    <input type="amount" name="amount" placeholder="Enter your email" required>
                 </div>
                 <div class="input_box">
-                    <label for="phone">Phone Number</label>
-                    <input type="number" name="phoneno" placeholder="Enter your number" required>
+                    <label for="">Description</label>
+                    <input type="" name="description" placeholder="Enter your number" required>
                 </div>
                 <div class="input_box">
-                    <label for="pass">Password</label>
-                    <input type="password" name="password" placeholder="Enter your password" required>
+                    <label for="date">Date</label>
+                    <input type="date" name="date" placeholder="Enter your password" required>
                 </div>
             </div>
             
@@ -240,11 +240,11 @@ form .gender{
     <thead>
         <tr>
             <th>#id</th>
-            <th>Full Name</th>
-            <th>User name</th>
-            <th>E-mail</th>
-            <th>Phone No</th>
-            <th>Password</th>
+            <!-- <th>Type</th> -->
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Description</th>
+            <th>Date</th>
             <th>Action</th>
         </tr>
     </thead>
@@ -254,23 +254,20 @@ form .gender{
                 <td>
                     <%= index + 1 %>
                 </td>
+                <!-- <td>
+                    <%= volunteers.type %>
+                </td> -->
                 <td>
-                    <%= volunteers.fullName %>
+                    <%= volunteers.category %>
                 </td>
                 <td>
-                    <%= volunteers.userName %>
+                    <%= volunteers.amount %>
                 </td>
                 <td>
-                    <%= volunteers.email %>
+                    <%= volunteers.description %>
                 </td>
                 <td>
-                    <%= volunteers.phoneno %>
-                </td>
-                <td>
-                    <%= volunteers.password %>
-                </td>
-                <td>
-                    <%= volunteers.title %>
+                    <%= volunteers.date %>
                 </td>
                 <td>
                     <a href="/editTodoController/<%= volunteers._id %>">edit</a>
